@@ -1,0 +1,17 @@
+
+# https://docs.nextstrain.org/projects/ncov/en/latest/tutorial/example-data.html
+# install package
+conda install -c bioconda nextstrain-cli
+
+# Download the ncov workflow
+git clone https://github.com/nextstrain/ncov.git
+
+# change directory
+cd ncov
+git clone https://github.com/nextstrain/ncov-tutorial
+
+# Run
+nextstrain build . --configfile ncov-tutorial/example-data.yaml
+
+# Visualize the results
+nextstrain view auspice/ 
